@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Liu+Jian+Mao+Cao&family=Noto+Sans+TC&family=Zhi+Mang+Xing&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <title>姵璇+人和</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logo">
+        <h1 class="mainStyle">和+璇</h1>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="#section1">最重要的人就坐在身旁</a></li>
+          <li><a href="#section2">婚禮資訊</a></li>
+          <li><a href="#section3">婚紗搶先看</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="background-img1">
+        <div class="image" data-image="./Pic/jump1.png"></div>
+        <div class="image" data-image="./Pic/jump2.png"></div>
+        <div class="filter"></div>
+        <h2>Hallelujah chance!</h2>
+        <div class="handsImage" data-image="./Pic/hands.png"></div>
+      </section>
+      <div class="counter">
+        <div class="counterTitle">
+          <p class="counterTitleText">Countdown to Wedding Ceremony</p>
+        </div>
+        <div class="countDownBlock">
+          <div class="countDownElement countDay">
+            <span class="countDayText">00</span>
+            <span class="labelDayText">days</span>
+          </div>
+          <div class="countDownElement countHour">
+            <span class="countHourText">00</span>
+            <span class="labelHourText">hours</span>
+          </div>
+          <div class="countDownElement countMin">
+            <span class="countMinText">00</span>
+            <span class="labelMinText">minutes</span>
+          </div>
+          <div class="countDownElement countSec">
+            <span class="countSecText">00</span>
+            <span class="labelSecText">seconds</span>
+          </div>
+        </div>
+      </div>
+      <section class="aboutUs" id="section1">
+        <h3>最重要的人就坐在身旁</h3>
+        <div class="coupleInfo">
+          <div class="coupleImg" data-name="人和">
+            <img src="./Pic/ptrait1.png" alt="人和的照片" />
+            <p>人和</p>
+          </div>
+          <div class="coupleImg" data-name="姵璇">
+            <img src="./Pic/ptrait2.png" alt="姵璇的照片" />
+            <p>姵璇</p>
+          </div>
+        </div>
+      </section>
+      <section class="aboutUsText">
+        <p>
+          大家有看過經典日劇《求婚大作戰》嗎？<br />故事是男主角（山下智久飾）在青梅竹馬（長澤雅美飾）的婚禮上悔恨沒能及時告白，
+          不斷回到過去挽回戀情的故事。<br />男主角回到高中，在黑板上寫下「最重要的人就坐在身旁」，想傳達心意寫給坐給隔壁的女主角，也是整個故事想要表達的意思。
+          提醒我們及早去愛，更認真一點，珍惜身邊的緣分。<br />
+          謝謝大家蒞臨我們兩個人的婚禮，來的人都是我們重要的朋友，共度的時光有限，能再次聚首，實屬難得。希望大家帶著歡喜的心情，來交換滿滿的祝福與喜悅。
+        </p>
+      </section>
+      <section class="weddingLink" >
+        <h3>收集婚禮點滴</h3>
+        <p>
+          我們開了一個<a href="http://www.facebook.com/groups/peihsuanandrenho/">臉書社團</a> 來分享婚禮的照片與影像，歡迎加入，分享照片與影像，並天時地利姵人和
+        </p>
+        
+      </section>
+      <section class="weddingInfo" id="section2">
+        <h3>婚禮資訊</h3>
+        <p>
+          天時：2023/10/1(日) 12:00 入席 12:30 開席 <br />地利：兄弟大飯店 13樓
+          桂花聽 （台北市南京東路三段255號） <br />陳人和、李姵璇 敬邀
+        </p>
+        <div id="map"></div>
+      </section>
+      <section class="notice">
+        <h3>婚禮姵和事項</h3>
+        <div class="notice-main">
+          <div class="notice-text">
+            <h4>
+              <i class="fa-solid fa-camera fa-sm" style="color: #e4a5d0"></i
+              >拍照吧!底片機都準備好了
+            </h4>
+            <p>
+              兄弟飯店成立超過40年，裝潢復古，我們因此禮服選得較復古外，現場也準備了4台底片相機，歡迎朋友到禮金桌詢問，一起捕捉婚禮片刻。
+              拍完記得把相機交還大會，我們會沖洗出來跟大家分享。
+            </p>
+          </div>
+          <div class="notice-text">
+            <h4>
+              <i class="fa-solid fa-icicles" style="color: #e4a5d0"></i>
+              打包救企鵝與北極熊
+            </h4>
+            <p>喜宴餐點很澎湃，歡迎打包回家，也歡迎自帶餐盒。</p>
+          </div>
+          <div class="notice-text">
+            <h4>
+              <i
+                class="fa-solid fa-champagne-glasses"
+                style="color: #e4a5d0"
+              ></i>
+              喝酒不能做的事
+            </h4>
+            <p>
+              紅酒、啤酒與果汁請盡情享用。飲酒的朋友請留意，喝酒不開車，平安回家。。
+            </p>
+          </div>
+          <div class="notice-text">
+            <h4>
+              <i class="fa-solid fa-square-parking" style="color: #e4a5d0"></i
+              >停車要看運氣
+            </h4>
+            <p>
+              飯店地下停車場費用都可折抵，但車位很有限，開車前往請先留意鄰近停車資訊。。
+            </p>
+          </div>
+          <div class="notice-text">
+            <h4>
+              <i class="fa-solid fa-train" style="color: #e4a5d0"></i
+              >捷運超方便的啦
+            </h4>
+            <p>
+              搭乘捷運前來非常方便，南京復興站（棕線 BR11/綠線
+              G16）出口6或7，出來即達飯店，長途旅程或想在中午暢飲的朋友，不妨考慮。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="photos" id="section3">
+        <h3 class="titleText">婚紗搶先看</h3>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./Pic/G1.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G2.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G3.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G4.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G5.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G6.jpg" alt="" onclick="openModal(this)" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./Pic/G7.jpg" alt="" onclick="openModal(this)" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <section class="background-img2">
+        <div class="image" data-image="./Pic/jump1.png"></div>
+        <div class="image" data-image="./Pic/jump2.png"></div>
+        <div class="filter"></div>
+        <h2>Hallelujah chance!</h2>
+      </section>
+    </main>
+    <footer>
+      <section class="filter2">
+        <div class="pureColor"></div>
+      </section>
+    </footer>
+    <button class="scroll-to-top-button" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="./app.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmRnUJPtoR_jbdh2jSOM6Cp0S4NO74HSk&callback=initMap"
+    ></script>
+  </body>
+  <script>
+    // 用 new Date()先設定婚禮的時間
+    const weddingDate = new Date("2023-10-01T12:00:00").getTime();
+
+    // 更新倒數計時的函數
+    function updateCountdown() {
+      // 當下的日期時間
+      const currentDate = new Date().getTime();
+
+      // 現在到婚禮的時間差（以秒為單位）
+      const timeDifference = weddingDate - currentDate;
+
+      // 計算剩餘天數、時數、分秒
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // 更新页面上的倒计时元素
+      document.querySelector(".countDayText").textContent = days
+        .toString()
+        .padStart(2, "0");
+      document.querySelector(".countHourText").textContent = hours
+        .toString()
+        .padStart(2, "0");
+      document.querySelector(".countMinText").textContent = minutes
+        .toString()
+        .padStart(2, "0");
+      document.querySelector(".countSecText").textContent = seconds
+        .toString()
+        .padStart(2, "0");
+    }
+
+    // 每秒更新一次倒數計時
+    setInterval(updateCountdown, 1000);
+
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 10, // 幻燈片之間的間距
+      slidesPerView: 2, // 同時顯示2個幻燈片
+      centeredSlides: true, // 幻燈片居中顯示
+      autoplay: {
+        delay: 3000, // 自動滾動的時間間隔（以毫秒為單位）
+      },
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    // 抓取所有的圖片元素
+    const images = document.querySelectorAll(".swiper-slide img");
+    let currentImageIndex = 0;
+    // 為每張圖添加點擊的事件監聽
+    images.forEach((image) => {
+      // 在點擊圖片後淡入放大
+      image.addEventListener("click", () => {
+        // 創建放大後的視圖
+        const zoomedView = document.createElement("div");
+        zoomedView.className = "zoomed-view";
+
+        // 創建放大後的圖片
+        const zoomedImage = document.createElement("img");
+        zoomedImage.src = image.src;
+
+        // 將放大後的圖片加入到放大視圖中
+        zoomedView.appendChild(zoomedImage);
+
+        // 將放大視圖添加到 body 中
+        document.body.appendChild(zoomedView);
+
+        // 使用 setTimeout 添加淡入效果
+        setTimeout(() => {
+          zoomedView.style.opacity = "1";
+        }, 100);
+
+        // 點擊放大後的圖片後淡出
+        zoomedView.addEventListener("click", () => {
+          // 添加淡出效果
+          zoomedView.style.opacity = "0";
+
+          // 使用 setTimeout 在淡出後刪除放大視圖
+          setTimeout(() => {
+            document.body.removeChild(zoomedView);
+          }, 500); // 與過渡時間一致
+        });
+
+        // 使用滾輪切換圖片
+        zoomedView.addEventListener("wheel", (event) => {
+          event.preventDefault();
+
+          if (event.deltaY > 0) {
+            // 向下滾動，顯示下一張圖片
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+          } else {
+            // 向上滾動，顯示上一張圖片
+            currentImageIndex =
+              (currentImageIndex - 1 + images.length) % images.length;
+          }
+
+          // 切換放大後的圖片
+          zoomedImage.src = images[currentImageIndex].src;
+        });
+      });
+    });
+
+    // 初始地圖函数
+    function initMap() {
+      const customMapStyle = [
+        {
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#f5f5f5",
+            },
+          ],
+        },
+        {
+          elementType: "labels.icon",
+          stylers: [
+            {
+              color: "#c68080",
+            },
+            {
+              saturation: 5,
+            },
+            {
+              lightness: 35,
+            },
+            {
+              visibility: "simplified",
+            },
+            {
+              weight: 2,
+            },
+          ],
+        },
+        {
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#c68080",
+            },
+          ],
+        },
+        {
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              color: "#f5f5f5",
+            },
+          ],
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#bdbdbd",
+            },
+          ],
+        },
+        {
+          featureType: "administrative.locality",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "administrative.neighborhood",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "landscape.man_made",
+          stylers: [
+            {
+              color: "#e6d6d1",
+            },
+            {
+              lightness: -5,
+            },
+            {
+              visibility: "simplified",
+            },
+            {
+              weight: 3.5,
+            },
+          ],
+        },
+        {
+          featureType: "landscape.natural.terrain",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#eeeeee",
+            },
+          ],
+        },
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#757575",
+            },
+          ],
+        },
+        {
+          featureType: "poi.attraction",
+          stylers: [
+            {
+              visibility: "simplified",
+            },
+          ],
+        },
+        {
+          featureType: "poi.business",
+          stylers: [
+            {
+              saturation: 45,
+            },
+            {
+              lightness: 10,
+            },
+            {
+              weight: 1.5,
+            },
+          ],
+        },
+        {
+          featureType: "poi.government",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "poi.medical",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#e5e5e5",
+            },
+          ],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#9e9e9e",
+            },
+          ],
+        },
+        {
+          featureType: "poi.place_of_worship",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "poi.school",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "poi.sports_complex",
+          stylers: [
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#ffffff",
+            },
+          ],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#ebbcbc",
+            },
+            {
+              lightness: 35,
+            },
+          ],
+        },
+        {
+          featureType: "road.arterial",
+          stylers: [
+            {
+              color: "#ecbfbb",
+            },
+            {
+              saturation: 15,
+            },
+            {
+              weight: 5.5,
+            },
+          ],
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#e8b0b0",
+            },
+          ],
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#757575",
+            },
+          ],
+        },
+        {
+          featureType: "road.highway",
+          stylers: [
+            {
+              color: "#cdaaa7",
+            },
+          ],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#dadada",
+            },
+          ],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#616161",
+            },
+          ],
+        },
+        {
+          featureType: "road.local",
+          stylers: [
+            {
+              color: "#e4dddd",
+            },
+            {
+              visibility: "simplified",
+            },
+          ],
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#d79393",
+            },
+          ],
+        },
+        {
+          featureType: "transit.line",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#e5e5e5",
+            },
+            {
+              visibility: "off",
+            },
+          ],
+        },
+        {
+          featureType: "transit.station",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#eeeeee",
+            },
+          ],
+        },
+        {
+          featureType: "transit.station.rail",
+          stylers: [
+            {
+              saturation: -5,
+            },
+            {
+              lightness: -5,
+            },
+            {
+              weight: 3.5,
+            },
+          ],
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#c9c9c9",
+            },
+          ],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              color: "#9e9e9e",
+            },
+          ],
+        },
+      ];
+      new google.maps.Map(document.getElementById("map"), {
+        mapId: "947574c81966fb8",
+        center: { lat: 25.052157592312202, lng: 121.54457463878369 },
+        zoom: 18,
+        // styles: customMapStyle,
+      });
+    }
+
+    window.initMap = initMap;
+
+    // nav點擊後會滾到對應位置的功能
+    document.querySelectorAll("nav a").forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // 選取到 href的屬性值（例如，"#section1"）
+        const targetId = this.getAttribute("href").substring(1);
+
+        // 找到目標的 DOM 元素
+        const targetSection = document.getElementById(targetId);
+
+        // 使用 scrollIntoView 的method来平滑滾動到目的地
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+    // 滾到頁面最上方的函數
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  </script>
+</html>

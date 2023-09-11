@@ -1,0 +1,672 @@
+@charset "UTF-8";
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 放大视图样式 */
+.zoomed-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* 确保放大视图位于顶层 */
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+  opacity: 0;
+}
+
+/* 放大后的图片样式 */
+.zoomed-view img {
+  max-width: 60%; /* 设置图片最大宽度为屏幕宽度的60% */
+  max-height: 60vh; /* 设置图片最大高度 */
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header {
+  background-color: rgba(245, 229, 231, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+}
+header section.logo h1 {
+  padding-top: 0.5rem;
+  font-family: "Zhi Mang Xing", "Liu Jian Mao Cao", Arial, sans-serif;
+  font-size: 1.8rem;
+}
+header nav {
+  flex: 5 1 500px;
+}
+header nav ul {
+  padding-top: 0.8rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul li a {
+  color: rgba(95, 90, 90, 0.5);
+  padding-right: 2.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  /* 重新定義倒數計時的容器 */
+}
+main section.background-img1 {
+  background-image: url("./Pic/jump1.png");
+  min-height: 70vh;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 8s ease;
+}
+main section.background-img1 div.filter {
+  padding: 200px;
+  background-color: rgba(210, 150, 150, 0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: background-color 2s ease;
+}
+main section.background-img1 h2 {
+  display: flex;
+  font-size: 2.5rem;
+  color: rgb(210, 125, 108);
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  z-index: 5;
+  font-family: "Josefin Slab", serif, Arial, sans-serif;
+  transition: color 2s ease;
+}
+main section.background-img1:hover {
+  background-image: url("./Pic/jump2.png");
+  min-height: 70vh;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main section.background-img1:hover h2 {
+  color: transparent;
+}
+main section.background-img1 div.handsImage {
+  background-image: url("./Pic/hands.png");
+  width: 30vh;
+  height: 30vh;
+  background-size: contain; /* 長寬比 */
+  background-repeat: no-repeat; /* 防止圖片重複 */
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0.4;
+  position: absolute;
+}
+main section.background-img2 {
+  background-image: url("./Pic/end1.jpg");
+  min-height: 70vh;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 8s ease;
+}
+main section.background-img2 div.filter {
+  padding: 200px;
+  background-color: rgba(210, 150, 150, 0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: background-color 2s ease;
+}
+main section.background-img2 h2 {
+  display: flex;
+  font-size: 2.5rem;
+  color: rgb(210, 125, 108);
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  z-index: 5;
+  font-family: "Josefin Slab", serif, Arial, sans-serif;
+  transition: color 2s ease;
+}
+main section.background-img2:hover {
+  background-image: url("./Pic/end2.jpg");
+  min-height: 70vh;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main section.background-img2:hover h2 {
+  color: transparent;
+}
+main div.counter {
+  max-width: 55vh;
+  max-height: 35vh;
+  padding-top: 3.8rem;
+  padding-bottom: 3.8rem;
+  margin: 0 auto; /* 水平置中對齊 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(231, 225, 225);
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  border-radius: 3%;
+  /* 样式整个倒计时区域容器 */
+  /* 样式倒计时元素 */
+  /* 样式倒计时元素文本 */
+  /* 样式倒计时元素文本标签（days, hours, minutes, seconds） */
+}
+main div.counter p.counterTitleText {
+  margin: 0;
+  padding: 2rem;
+  font-size: 1.5rem; /* 设置文本大小 */
+  font-family: "Josefin Slab", serif, Arial, sans-serif;
+}
+main div.counter div.countDownBlock {
+  display: flex;
+  justify-content: space-between; /* 等距分布四个区域 */
+  padding: 10px; /* 添加内边距，根据需要调整 */
+}
+main div.counter div.countDownElement {
+  display: flex;
+  flex-direction: column; /* 纵向排列元素内部文本 */
+  text-align: center; /* 文本居中对齐 */
+  margin: 0; /* 重置外边距 */
+  padding: 10px; /* 添加内边距，根据需要调整 */
+  border: 1px solid #ccc; /* 左侧边框，除第一个元素外 */
+}
+main div.counter span.countDayText,
+main div.counter span.countHourText,
+main div.counter span.countMinText,
+main div.counter span.countSecText {
+  font-size: 1.2rem;
+  color: #777;
+}
+main div.counter span.labelDayText,
+main div.counter span.labelHourText,
+main div.counter span.labelMinText,
+main div.counter span.labelSecText {
+  font-size: 0.8rem; /* 设置标签文本大小 */
+  color: #777; /* 设置标签文本颜色 */
+  text-transform: uppercase; /* 将文本转换为大写 */
+}
+main section.aboutUs {
+  background-color: rgb(232, 218, 210);
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+}
+main section.aboutUs h3 {
+  padding-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+main section.aboutUs div.coupleInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.aboutUs div.coupleInfo div.coupleImg {
+  margin: 3rem;
+  transition: all 0.8s ease;
+  width: 150px;
+  height: 150px;
+  z-index: 0;
+  background-size: contain; /* 使用contain属性，确保图像适应div并保持纵横比 */
+}
+main section.aboutUs div.coupleInfo div.coupleImg p {
+  text-align: center;
+}
+main section.aboutUs div.coupleInfo div.coupleImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main section.aboutUsText {
+  background-color: rgb(232, 218, 210);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-top: 30px;
+  text-align: center; /* 文本居中对齐 */
+  color: rgb(102, 105, 108);
+  min-height: 30vh;
+  z-index: 5;
+}
+main section.aboutUsText p {
+  font-size: 14px; /* 修改段落字体大小为14像素或根据需要调整 */
+  padding: 50px;
+  text-align: left;
+  max-width: 600px;
+}
+main section.weddingInfo,
+main section.weddingLink {
+  display: grid;
+  place-items: center;
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+main section.weddingInfo h3,
+main section.weddingLink h3 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+main section.weddingInfo p,
+main section.weddingLink p {
+  line-height: 2;
+  font-size: 12px;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+main section.weddingInfo #map,
+main section.weddingLink #map {
+  width: 80%;
+  height: 450px; /* 设置地图的高度 */
+}
+main section.notice {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 25px;
+  min-height: 40vh;
+  background-color: rgb(247, 232, 237);
+}
+main section.notice h3 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+main section.notice div.notice-main {
+  flex-direction: column;
+  display: flex;
+  padding: 1rem;
+}
+main section.notice div.notice-main div.notice-text {
+  padding: 1.5rem;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+main section.notice div.notice-main div.notice-text h4 {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main section.notice div.notice-main div.notice-text h4 i {
+  padding-right: 10px;
+}
+main section.notice div.notice-main div.notice-text p {
+  line-height: 2;
+  font-size: 12px;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+main section.photos {
+  flex-wrap: wrap;
+  padding-bottom: 250px;
+  background-color: rgba(210, 150, 150, 0.3);
+}
+main section.photos h3.titleText {
+  padding-top: 60px;
+  margin-bottom: 100px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+main section.photos div.swiper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  overflow: hidden; /* 隱藏超出容器的部分 */
+}
+main section.photos div.swiper div.swiper-wrapper div.swiper-slide {
+  width: 50%; /* 每個幻燈片的寬度為50%以並排顯示 */
+  transition: opacity 0.5s ease;
+  background-size: cover;
+  position: relative; /* 設置相對定位，以便使用 object-position */
+}
+main section.photos div.swiper div.swiper-wrapper div.swiper-slide:hover {
+  opacity: 1; /* 懸停時取消淡出效果 */
+}
+main section.photos div.swiper div.swiper-wrapper div.swiper-slide img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center; /* 調整圖片在容器中的位置 */
+}
+@media screen and (max-width: 450px) {
+  main body header {
+    display: flex;
+  }
+  main body header section.logo {
+    flex-direction: row;
+    min-width: 50vw;
+  }
+  main body header section.logo img {
+    flex-direction: row;
+    width: 40vw;
+    height: 40vw;
+  }
+  main body header nav ul {
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    top: -75px;
+  }
+  main body header nav ul li {
+    height: auto;
+    align-items: center;
+    font-size: 0.5rem;
+    white-space: nowrap;
+  }
+  main body header nav ul li a {
+    text-decoration: none;
+    font-size: 0.5rem;
+  }
+  main body section.background-img1 {
+    position: relative;
+  }
+  main body section.background-img1 div.filter {
+    max-height: 30vh;
+  }
+  main body section.background-img1 h2 {
+    display: flex;
+    font-size: 0.8rem;
+    color: rgb(59, 61, 63);
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    margin-bottom: -10px;
+    z-index: 5;
+    font-family: "Josefin Slab", serif, Arial, sans-serif;
+  }
+  main body section.background-img1 div.handsImage {
+    background-image: url("./Pic/hands.png");
+    width: 20vh;
+    height: 20vh;
+    background-size: contain; /* 使用contain属性，确保图像适应div并保持纵横比 */
+    background-repeat: no-repeat; /* 防止图像重复 */
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0.4;
+    position: absolute;
+  }
+  main body section.aboutUs {
+    background-color: rgb(232, 218, 210);
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+  }
+  main body section.aboutUs h3 {
+    padding-top: 60px;
+    margin-bottom: 40px;
+    justify-items: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  main body section.aboutUs div.coupleInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main body section.aboutUs div.coupleInfo div.coupleImg {
+    margin: 3rem;
+    transition: all 0.8s ease;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    background-size: contain; /* 使用contain属性，确保图像适应div并保持纵横比 */
+  }
+  main body section.aboutUs div.coupleInfo div.coupleImg p {
+    text-align: center;
+  }
+  main body section.aboutUs div.coupleInfo div.coupleImg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main body section.aboutUsText {
+    background-color: rgb(232, 218, 210);
+    justify-items: center;
+    padding: 40px;
+    text-align: center; /* 文字框置中 */
+    color: rgb(102, 105, 108);
+    min-height: 30vh;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main body section.aboutUsText p {
+    font-size: 12px; /* 修改段落字体大小为14像素或根据需要调整 */
+    padding: 40px;
+    text-align: left;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 800px) {
+  main body header section.logo {
+    flex-direction: column;
+    min-width: 80vw;
+  }
+  main body header section.logo img {
+    flex-direction: column;
+    width: 80vw;
+    height: 80vw;
+  }
+  main body header nav {
+    font-size: 3rem;
+  }
+  main body header nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    top: -75px;
+  }
+  main body header nav ul li {
+    height: 0.5rem;
+    justify-content: end;
+  }
+  main body main section.background-img1 {
+    background-size: contain; /* 使用contain属性，确保图像适应div并保持纵横比 */
+    background-repeat: no-repeat; /* 防止图像重复 */
+    background-position: center; /* 将图像居中 */
+    max-height: 60vh;
+    min-width: 60vh;
+    position: relative;
+  }
+  main body main section.background-img1 div.image {
+    max-height: 60vh;
+    min-width: 60vh;
+    display: flex; /* 添加此样式 */
+    justify-content: center; /* 添加此样式，使图像水平居中 */
+    align-items: center; /* 添加此样式，使图像垂直居中 */
+  }
+  main body main section.background-img1 div.filter {
+    background-color: rgba(166, 121, 121, 0.3);
+    width: 100%;
+    max-height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  main body main section.background-img1 h2 {
+    display: flex;
+    font-size: 3.5rem;
+    color: rgb(102, 105, 108);
+    align-items: center;
+    justify-content: center;
+    max-height: 60vh;
+    z-index: 0;
+    font-family: "Josefin Slab", serif, Arial, sans-serif;
+  }
+  main body main section.background-img1 div.handsImage {
+    background-image: url("./Pic/hands.png");
+    width: 30%;
+    height: 30%;
+    display: flex;
+    background-size: contain; /* 使用contain属性，确保图像适应div并保持纵横比 */
+    background-repeat: no-repeat; /* 防止图像重复 */
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    top: 600px;
+    left: 35%;
+    z-index: 10;
+    position: absolute;
+    opacity: 0.2;
+  }
+  main body main section.aboutUsText {
+    background-color: rgb(232, 218, 210);
+    padding-top: 30px;
+    text-align: center; /* 文本居中对齐 */
+    color: rgb(102, 105, 108);
+    min-height: 40vh;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  main body main section.aboutUsText p {
+    width: 80vw;
+    font-size: 14px; /* 修改段落字体大小为14像素或根据需要调整 */
+    padding: 10px;
+    text-align: center;
+  }
+  main body main section.photos {
+    padding: 500px;
+    flex-wrap: wrap;
+  }
+  main body main section.notice {
+    display: block;
+    flex-direction: row;
+    padding-top: 25px;
+    min-height: 40vh;
+    background-color: rgb(247, 232, 237);
+  }
+  main body main section.notice h3 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  main body main section.notice div.notice-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  main body main section.notice div.notice-main div.notice-text {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+  }
+  main body main section.notice div.notice-main div.notice-text h4 {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main body main section.notice div.notice-main div.notice-text h4 i {
+    padding-right: 10px;
+  }
+  main body main section.notice div.notice-main div.notice-text p {
+    line-height: 2;
+    font-size: 11px;
+    padding-bottom: 50px;
+    flex-direction: column;
+  }
+}
+
+footer section.filter2 {
+  max-width: 100vw;
+}
+footer section.filter2 div.pureColor {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(210, 150, 150, 0.3);
+}
+footer section.endTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(190, 134, 134, 0.5);
+  color: #eee2d4;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 150;
+}
+button.scroll-to-top-button:hover {
+  background-color: rgba(206, 74, 74, 0.7);
+}/*# sourceMappingURL=style.css.map */
