@@ -28,18 +28,18 @@
   <body>
     <header>
       <section class="logo">
-        <h1 class="mainStyle">和+璇</h1>
+        <h1 class="mainStyle">Hallelujah chance!</h1>
       </section>
       <nav>
         <ul>
-          <li><a href="#section1">最重要的人就坐在身旁</a></li>
+          <li><a href="#section1">姵和婚禮</a></li>
           <li><a href="#section2">婚禮資訊</a></li>
           <li><a href="#section3">婚紗搶先看</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="background-img1">
+      <section class="background-img1" id="clickable-bg">
         <div class="image" data-image="./Pic/jump1.png"></div>
         <div class="image" data-image="./Pic/jump2.png"></div>
         <div class="filter"></div>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <section class="aboutUs" id="section1">
-        <h3>最重要的人就坐在身旁</h3>
+        <h3>姵和婚禮</h3>
         <div class="coupleInfo">
           <div class="coupleImg" data-name="人和">
             <img src="./Pic/ptrait1.png" alt="人和的照片" />
@@ -84,24 +84,30 @@
       </section>
       <section class="aboutUsText">
         <p>
-          大家有看過經典日劇《求婚大作戰》嗎？<br />故事是男主角（山下智久飾）在青梅竹馬（長澤雅美飾）的婚禮上悔恨沒能及時告白，
-          不斷回到過去挽回戀情的故事。<br />男主角回到高中，在黑板上寫下「最重要的人就坐在身旁」，想傳達心意寫給坐給隔壁的女主角，也是整個故事想要表達的意思。
-          提醒我們及早去愛，更認真一點，珍惜身邊的緣分。<br />
-          謝謝大家蒞臨我們兩個人的婚禮，來的人都是我們重要的朋友，共度的時光有限，能再次聚首，實屬難得。希望大家帶著歡喜的心情，來交換滿滿的祝福與喜悅。
+          大家有看過經典日劇《求婚大作戰》嗎？
+          男主角在青梅竹馬的婚禮上，悔恨沒能及時告白，不斷回到過去，只為挽回戀情。
+          在第二集裡，男主角回到高中，在一個放學的午後，在黑板上寫下「最重要的人就坐在身旁」，想傳達給坐在隔壁的女主角。
+          共度的時光有限，有幸能藉由婚禮，讓我們能再次坐在彼此身邊，回到每個共同參與的珍貴時光。
         </p>
       </section>
-      <section class="weddingLink" >
+      <section class="weddingLink">
         <h3>收集婚禮點滴</h3>
         <p>
-          我們開了一個<a href="http://www.facebook.com/groups/peihsuanandrenho/">臉書社團</a> 來分享婚禮的照片與影像，歡迎加入，分享照片與影像，並天時地利姵人和
+          我們開了一個<a href="http://www.facebook.com/groups/peihsuanandrenho/"
+            >臉書社團</a
+          >，歡迎加入獻上祝福，一起分享婚禮的各種片刻。當日的社群tag請用
+          #姵和得天衣無縫 。
         </p>
-        
       </section>
       <section class="weddingInfo" id="section2">
         <h3>婚禮資訊</h3>
         <p>
+          #姵和得天衣無縫<br />
           天時：2023/10/1(日) 12:00 入席 12:30 開席 <br />地利：兄弟大飯店 13樓
-          桂花聽 （台北市南京東路三段255號） <br />陳人和、李姵璇 敬邀
+          桂花聽 （台北市南京東路三段255號，<a
+            href="https://www.brotherhotel.com.tw/?page_id=3072"
+            >交通指引</a
+          >） <br />陳人和、李姵璇 敬邀
         </p>
         <div id="map"></div>
       </section>
@@ -114,8 +120,8 @@
               >拍照吧!底片機都準備好了
             </h4>
             <p>
-              兄弟飯店成立超過40年，裝潢復古，我們因此禮服選得較復古外，現場也準備了4台底片相機，歡迎朋友到禮金桌詢問，一起捕捉婚禮片刻。
-              拍完記得把相機交還大會，我們會沖洗出來跟大家分享。
+              兄弟飯店成裝潢略為復古，現場準備2台限量即可拍底片相機，體驗復古拍照。
+              歡迎朋友到禮金桌詢問，先詢問的2位朋友可以當現場的攝影師，一起捕捉婚禮片刻。
             </p>
           </div>
           <div class="notice-text">
@@ -123,7 +129,7 @@
               <i class="fa-solid fa-icicles" style="color: #e4a5d0"></i>
               打包救企鵝與北極熊
             </h4>
-            <p>喜宴餐點很澎湃，歡迎打包回家，也歡迎自帶餐盒。</p>
+            <p>喜宴餐點很澎湃，歡迎打包回家，若自帶保鮮盒更是帥氣到不行。</p>
           </div>
           <div class="notice-text">
             <h4>
@@ -182,9 +188,6 @@
             <div class="swiper-slide">
               <img src="./Pic/G6.jpg" alt="" onclick="openModal(this)" />
             </div>
-            <div class="swiper-slide">
-              <img src="./Pic/G7.jpg" alt="" onclick="openModal(this)" />
-            </div>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
@@ -197,11 +200,11 @@
           <div class="swiper-scrollbar"></div>
         </div>
       </section>
-      <section class="background-img2">
-        <div class="image" data-image="./Pic/jump1.png"></div>
-        <div class="image" data-image="./Pic/jump2.png"></div>
+      <section class="justWhite"></section>
+      <section class="background-img2" id="clickable-bg2">
+        <div class="image" data-image="./Pic/end1.jpg"></div>
+        <div class="image" data-image="./Pic/end2.jpg"></div>
         <div class="filter"></div>
-        <h2>Hallelujah chance!</h2>
       </section>
     </main>
     <footer>
@@ -209,8 +212,8 @@
         <div class="pureColor"></div>
       </section>
     </footer>
-    <button class="scroll-to-top-button" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up"></i>
+    <button class="scrollTop" onclick="scrollToTop()">
+      <i class="fa-solid fa-arrow-up"></i>
     </button>
     <script src="./app.js"></script>
     <script
@@ -262,11 +265,13 @@
       // Optional parameters
       direction: "horizontal",
       loop: true,
-      spaceBetween: 10, // 幻燈片之間的間距
-      slidesPerView: 2, // 同時顯示2個幻燈片
-      centeredSlides: true, // 幻燈片居中顯示
+      effect: "cards",
+      grabCursor: true,
+      spaceBetween: 0, // 幻燈片之間的間距
+      slidesPerView: 1, // 同時顯示2個幻燈片
+      // centeredSlides: true, // 幻燈片居中顯示
       autoplay: {
-        delay: 3000, // 自動滾動的時間間隔（以毫秒為單位）
+        delay: 3500, // 自動滾動的時間間隔（以毫秒為單位）
       },
 
       // If we need pagination
@@ -288,6 +293,7 @@
 
     // 抓取所有的圖片元素
     const images = document.querySelectorAll(".swiper-slide img");
+    
     let currentImageIndex = 0;
     // 為每張圖添加點擊的事件監聽
     images.forEach((image) => {
@@ -342,7 +348,7 @@
       });
     });
 
-    // 初始地圖函数
+    // 初始地圖的函数
     function initMap() {
       const customMapStyle = [
         {
@@ -726,6 +732,45 @@
         top: 0,
         behavior: "smooth",
       });
+    }
+
+    // 获取需要切换背景的元素
+    const clickableBg = document.getElementById("clickable-bg");
+    const clickableBg2 = document.getElementById("clickable-bg2");
+
+    // 背景图片路径
+    const backgrounds = {
+      originalBg: "url(./Pic/jump1.png)",
+      newBg: "url(./Pic/jump2.png)",
+      originalBg2: "url(./Pic/end1.jpg)",
+      newBg2: "url(./Pic/end2.jpg)",
+    };
+
+    // 初始状态为原始背景
+    let isOriginal = true;
+
+    // 添加点击事件监听器
+    clickableBg.addEventListener("click", function () {
+      toggleBackgroundImage(this, backgrounds.originalBg, backgrounds.newBg);
+    });
+
+    clickableBg2.addEventListener("click", function () {
+      toggleBackgroundImage(this, backgrounds.originalBg2, backgrounds.newBg2);
+    });
+
+    function toggleBackgroundImage(element, original, newBg) {
+      if (isOriginal) {
+        // 在更改背景图片之前添加一个小延迟
+        setTimeout(function () {
+          element.style.backgroundImage = newBg;
+        }, 100);
+      } else {
+        setTimeout(function () {
+          element.style.backgroundImage = original;
+        }, 100);
+      }
+
+      isOriginal = !isOriginal;
     }
   </script>
 </html>
