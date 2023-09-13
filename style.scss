@@ -28,6 +28,10 @@ $background5: "./Pic/end2.jpg";
   background-repeat: no-repeat;
   background-position: center;
 
+  &:hover {
+    cursor: pointer !important; /* 设置光标为手指指向图标 */
+  }
+
   h2 {
     display: flex;
     font-size: 2.5rem;
@@ -49,10 +53,6 @@ $background5: "./Pic/end2.jpg";
   //   background-size: contain;
   //   background-repeat: no-repeat;
   //   background-position: center;
-  // }
-
-  // &:hover .filter {
-  //   background-color: rgba(210, 150, 150, 0); // Change to transparent on hover
   // }
 
   &:hover h2 {
@@ -84,6 +84,21 @@ $background5: "./Pic/end2.jpg";
   max-width: 60%; /* 设置图片最大宽度为屏幕宽度的60% */
   max-height: 60vh; /* 设置图片最大高度 */
   object-fit: contain;
+}
+
+.hand-pointer {
+  cursor: pointer; /* 设置光标为手指指向图标 */
+}
+
+#custom-cursor {
+  position: fixed;
+  width: 24px; /* 自定义图标的宽度 */
+  height: 24px; /* 自定义图标的高度 */
+  background-color: #ff0000; /* 自定义图标的背景颜色 */
+  border-radius: 50%; /* 可以根据需要设置形状 */
+  pointer-events: none; /* 使鼠标图标不影响交互 */
+  transform: translate(-50%, -50%); /* 将图标定位在光标中心 */
+  transition: transform 0.2s ease; /* 添加平滑的过渡效果 */
 }
 
 header {
@@ -245,6 +260,13 @@ main {
       text-align: center;
       justify-items: center;
       align-items: center;
+    }
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      justify-items: center;
+      align-items: center;
+      font-size: 1.3rem;
     }
     div.coupleInfo {
       display: flex;
