@@ -59,7 +59,7 @@ $background5: "./Pic/end2.jpg";
     color: rgb(210, 125, 108);
   }
 
-  transition: background-image 1s ease; // Add transition for background-image
+  transition: background-image 0.6s ease-in-out; // Add transition for background-image
 }
 
 /* 放大视图样式 */
@@ -84,21 +84,6 @@ $background5: "./Pic/end2.jpg";
   max-width: 60%; /* 设置图片最大宽度为屏幕宽度的60% */
   max-height: 60vh; /* 设置图片最大高度 */
   object-fit: contain;
-}
-
-.hand-pointer {
-  cursor: pointer; /* 设置光标为手指指向图标 */
-}
-
-#custom-cursor {
-  position: fixed;
-  width: 24px; /* 自定义图标的宽度 */
-  height: 24px; /* 自定义图标的高度 */
-  background-color: #ff0000; /* 自定义图标的背景颜色 */
-  border-radius: 50%; /* 可以根据需要设置形状 */
-  pointer-events: none; /* 使鼠标图标不影响交互 */
-  transform: translate(-50%, -50%); /* 将图标定位在光标中心 */
-  transition: transform 0.2s ease; /* 添加平滑的过渡效果 */
 }
 
 header {
@@ -299,12 +284,12 @@ main {
     align-items: center;
     justify-items: center;
     padding-top: 30px;
-    text-align: center; /* 文本居中对齐 */
+    text-align: center;
     color: rgb(102, 105, 108);
     min-height: 30vh;
     z-index: 5;
     p {
-      font-size: 14px; /* 修改段落字体大小为14像素或根据需要调整 */
+      font-size: 16px; 
       padding: 50px;
       text-align: left;
       max-width: 600px;
@@ -324,7 +309,7 @@ main {
     }
     p {
       line-height: 2;
-      font-size: 14px;
+      font-size: 16px;
       padding: 50px;
       flex-direction: column;
     }
@@ -371,7 +356,7 @@ main {
         }
         p {
           line-height: 2;
-          font-size: 14px;
+          font-size: 16px;
           padding-bottom: 50px;
           flex-direction: column;
         }
@@ -391,12 +376,17 @@ main {
     // border: 5px solid red;
     h3.titleText {
       display: flex;
-
-      padding-top: 60px;
+      padding-top: 100px;
       margin-bottom: 100px;
       text-align: center;
       justify-items: center;
       align-items: center;
+    }
+    p {
+      line-height: 2;
+      font-size: 16px;
+      padding-bottom: 50px;
+      flex-direction: column;
     }
     div.swiper {
       width: 35vw;
@@ -701,7 +691,7 @@ main {
           align-items: center;
           p {
             width: 80vw;
-            font-size: 14px; /* 修改段落字体大小为14像素或根据需要调整 */
+            font-size: 16px; 
             padding: 10px;
             text-align: center;
           }

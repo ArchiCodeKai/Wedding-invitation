@@ -28,7 +28,7 @@
   <body>
     <header>
       <section class="logo">
-        <h1 class="mainStyle">Hallelujah chance!</h1>
+        <h1 class="mainStyle"></h1>
       </section>
       <nav>
         <ul>
@@ -86,8 +86,9 @@
       <section class="aboutUsText">
         <p>
           大家有看過經典日劇《求婚大作戰》嗎？
-          男主角在青梅竹馬的婚禮上，悔恨沒能及時告白，不斷回到過去，只為挽回戀情。
-          在第二集裡，男主角回到高中，在一個放學的午後，在黑板上寫下「最重要的人就坐在身旁」，想傳達給坐在隔壁的女主角。
+          男主角在青梅竹馬的婚禮上，悔恨沒能及時告白。在婚禮妖精的協助下，念出
+          Hallelujah Chance ，他就可回到過去，挽回戀情。
+          在第二集裡，男主角回到高中，一個放學的午後，在黑板上寫下「最重要的人就坐在身旁」，想傳達給坐在隔壁的女主角。
           共度的時光有限，有幸能藉由婚禮，讓我們能再次坐在彼此身邊，回到每個共同參與的珍貴時光。
         </p>
       </section>
@@ -121,8 +122,8 @@
               >拍照吧!底片機都準備好了
             </h4>
             <p>
-              兄弟飯店成裝潢略為復古，現場準備2台限量即可拍底片相機，體驗復古拍照。
-              歡迎朋友到禮金桌詢問，先詢問的2位朋友可以當現場的攝影師，一起捕捉婚禮片刻。
+              兄弟飯店稍有年代，裝潢略為復古，現場準備2台限量即可拍底片相機。
+              歡迎到禮金桌詢問，搶先體驗復古拍照，一起捕捉婚禮片刻。
             </p>
           </div>
           <div class="notice-text">
@@ -141,7 +142,7 @@
               喝酒不能做的事
             </h4>
             <p>
-              紅酒、啤酒與果汁請盡情享用。飲酒的朋友請留意，喝酒不開車，平安回家。。
+              紅酒、啤酒與果汁飯店無限供應，請盡情享用。飲酒的朋友請留意，喝酒不開車，平安回家。
             </p>
           </div>
           <div class="notice-text">
@@ -150,7 +151,7 @@
               >停車要看運氣
             </h4>
             <p>
-              飯店地下停車場費用都可折抵，但車位很有限，開車前往請先留意鄰近停車資訊。。
+              飯店地下停車場費用都可折抵，但車位很有限，開車前往請先留意鄰近停車資訊。
             </p>
           </div>
           <div class="notice-text">
@@ -159,14 +160,16 @@
               >捷運超方便的啦
             </h4>
             <p>
-              搭乘捷運前來非常方便，南京復興站（棕線 BR11/綠線
-              G16）出口6或7，出來即達飯店，長途旅程或想在中午暢飲的朋友，不妨考慮。
+              搭乘捷運前來非常方便，南京復興站出口6或7，出來即達飯店，推薦給長途旅程或想在中午暢飲的朋友。
             </p>
           </div>
         </div>
       </section>
       <section class="photos" id="section3">
-        <h3 class="titleText">婚紗搶先看</h3>
+        <h3 class="titleText">有人想先看婚紗嗎?</h3>
+        <p>
+          婚紗希望能在日常生活下拍出我們平常相處的樣子，讓大家感受到溫馨的幽默感與放鬆的喜悅。
+        </p>
         <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -294,7 +297,7 @@
 
     // 抓取所有的圖片元素
     const images = document.querySelectorAll(".swiper-slide img");
-    
+
     let currentImageIndex = 0;
     // 為每張圖添加點擊的事件監聽
     images.forEach((image) => {
@@ -697,15 +700,32 @@
           ],
         },
       ];
-      new google.maps.Map(document.getElementById("map"), {
-        mapId: "947574c81966fb8",
-        center: { lat: 25.052157592312202, lng: 121.54457463878369 },
-        zoom: 18,
-        // styles: customMapStyle,
-      });
+   
     }
 
     window.initMap = initMap;
+
+    window.addEventListener("load", function () {
+      initMap();
+
+      // 在 initMap 後面添加codde来顯示地圖標記
+      const map = new google.maps.Map(document.getElementById("map"), {
+        mapId: "947574c81966fb8",
+        center: { lat: 25.052157592312202, lng: 121.54457463878369 },
+        zoom: 18,
+      });
+      
+      const imageicon = "./icon/flower_3355179.png";
+      new google.maps.Marker({
+        position: { lat: 25.052157592312202, lng: 121.54457463878369 },
+        map: map,
+        title: "會場在這邊!",
+        // icon: {
+        //   url: imageicon,
+        //   scaleSize: new google.maps.Size(25, 30),
+        // },
+      });
+    });
 
     // nav點擊後會滾到對應位置的功能
     document.querySelectorAll("nav a").forEach((anchor) => {
