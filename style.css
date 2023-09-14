@@ -362,7 +362,7 @@ main section.photos h3.titleText {
 main section.photos p {
   line-height: 2;
   font-size: 16px;
-  padding-bottom: 50px;
+  padding: 50px;
   flex-direction: column;
 }
 main section.photos div.swiper {
@@ -399,6 +399,7 @@ main section.justWhite {
   background-color: white;
   width: 100%;
   height: 200px;
+  margin-bottom: 50px;
 }
 main section.justWhite h3 {
   padding-top: 80px;
@@ -409,7 +410,7 @@ main section.justWhite p {
   text-align: center;
   line-height: 2;
   font-size: 16px;
-  padding: 0px;
+  padding: 30px;
   flex-direction: column;
 }
 @media screen and (max-width: 450px) {
