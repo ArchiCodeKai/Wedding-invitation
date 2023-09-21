@@ -206,7 +206,7 @@
       </section>
       <section class="justWhite">
         <h3>離開網站前，來找找彩蛋吧</h3>
-        <p>點擊頁尾跟頁首的照片可以一起回到過去喔 （復刻父母小彩蛋）。</p>
+        <p>點擊頁尾跟頁首的照片可以一起回到過去喔 <br/>（復刻父母小彩蛋）。</p>
       </section>
       <section class="background-img2" id="clickable-bg2">
         <div class="image" data-image="./Pic/end1.jpg"></div>
@@ -757,11 +757,11 @@
       });
     }
 
-    // 获取需要切换背景的元素
+    // 獲取可切換背景的元素
     const clickableBg = document.getElementById("clickable-bg");
     const clickableBg2 = document.getElementById("clickable-bg2");
 
-    // 背景图片路径
+    // 背景圖片的路徑
     const backgrounds = {
       originalBg: "url(./Pic/jump1.png)",
       newBg: "url(./Pic/jump2.png)",
@@ -769,10 +769,10 @@
       newBg2: "url(./Pic/end2.jpg)",
     };
 
-    // 初始状态为原始背景
+    // 初始狀態設為原始背景
     let isOriginal = true;
 
-    // 添加点击事件监听器
+    // 加上點擊的事件監聽
     clickableBg.addEventListener("click", function () {
       toggleBackgroundImage(this, backgrounds.originalBg, backgrounds.newBg);
     });
@@ -786,11 +786,11 @@
         // 在更改背景图片之前添加一个小延迟
         setTimeout(function () {
           element.style.backgroundImage = newBg;
-        }, 100);
+        }, 80);
       } else {
         setTimeout(function () {
           element.style.backgroundImage = original;
-        }, 100);
+        }, 80);
       }
 
       isOriginal = !isOriginal;
